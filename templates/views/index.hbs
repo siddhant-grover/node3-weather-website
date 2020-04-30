@@ -1,0 +1,26 @@
+{{!-- instead of homepage served up as a static file we r going to render it using handel bars  --}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="/img/sd.jpeg">
+        <link rel="stylesheet" href="/css/styles.css">
+       
+
+    </head>
+    <body>
+        <div class="main-content">
+         {{>header}}
+    <h1>{{title}}</h1>   {{!-- accessing title property of the object we are passing in the 2nd argument of render in app.js--}}
+    <p>created by b : {{name}}</p>
+    <p id ="messageOne"></p>
+    <p id="messageTwo"></p>
+    </div>
+    <form>
+        <input placeholder="Location">
+        <button>Search</button>
+    </form>
+    {{>footer}} 
+     <script src="/js/app.js"></script> 
+    </body>
+</html>
