@@ -12,6 +12,7 @@ const geocode=require('./utils/geocode')
 //joins path 
 
 const app = express()//creating express application
+const port = process.env.PORT || 3000
 const viewsPath=path.join(__dirname,'../templates/views')//point to templates, ealry named as views
 const partialsPath = path.join(__dirname, '../templates/partials')
 
@@ -137,8 +138,8 @@ app.get('*',(req,res)=>{
     })
 
 })
-app.listen(3000,()=>{
-    console.log('srvr is up at 3000')
+app.listen(port,()=>{
+    console.log('srvr is up at'+port)
 })//common dev port , for http based website it is port 80(default), 2nd we can call callback func when server is up , async process
 
 
